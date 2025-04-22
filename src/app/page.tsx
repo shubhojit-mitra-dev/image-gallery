@@ -1,15 +1,8 @@
 'use client';
 
 import { CldImage, CldUploadButton } from "next-cloudinary";
-import Image from "next/image";
 import { useState } from "react";
 
-type UploadResult = {
-  info: {
-    public_id: string;
-  };
-  event: string;
-};
 
 export default function Home() {
   const [imageId, setImageId] = useState<string | null>(null);
@@ -19,7 +12,7 @@ export default function Home() {
         <CldUploadButton
           onSuccess={(result) => {
             if (result.info && typeof result.info === "object" && "public_id" in result.info) {
-              console.log(result.info.public_id);
+              setImageId(result.info.public_id);
             }
           }}
           uploadPreset="image-upload-unsigned"

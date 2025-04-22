@@ -9,8 +9,7 @@ A web application designed to showcase and manage images seamlessly. Built with 
 - [x] Setup
 - [x] Cloudinary Next - Upload Component
 - [x] Image Component
-- [ ] Cloudinary Transformations
-- [ ] Shadcn/ui
+- [x] Shadcn/ui
 - [ ] Side Navigation
 - [ ] Gallery Page
 - [ ] List Images
