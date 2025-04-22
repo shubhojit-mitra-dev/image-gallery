@@ -7,8 +7,8 @@ A web application designed to showcase and manage images seamlessly. Built with 
 ## Workflow
 
 - [x] Setup
-- [ ] Cloudinary Next - Upload Component
-- [ ] Image Component
+- [x] Cloudinary Next - Upload Component
+- [x] Image Component
 - [ ] Cloudinary Transformations
 - [ ] Shadcn/ui
 - [ ] Side Navigation
