@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import SideMenu from "@/components/side-menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,10 +38,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <nav className="border-b">
-            <div className="flex h-16 items-center px-4 container mx-auto">
-              <h1 className="text-xl lg:text-2xl font-bold uppercase">{"<Image Gallery />"}</h1>
-              <div className="ml-auto flex items-center space-x-7">
+            <nav className="border-b bg-background fixed top-0 left-0 w-full z-50">
+            <div className="flex h-16 items-center px-4 pl-12 sm:pl-4 container mx-auto">
+              <h1 className="text-xl lg:text-2xl font-extrabold tracking-tighter uppercase">{"<Image Gallery />"}</h1>
+              <div className="ml-auto flex items-center space-x-4">
                 <ModeToggle />
                 <Avatar>
                   <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
@@ -48,7 +50,16 @@ export default function RootLayout({
               </div>
             </div>
           </nav>
-          {children}
+          <div className="flex">
+            {/* <SideMenu /> */}
+            <SidebarProvider defaultOpen={false}>
+              <SideMenu />
+              <SidebarTrigger className="fixed top-0 left-0 mt-5 ml-3 z-50" />
+              <main className="w-full p-4 mt-16">
+                {children}
+              </main>
+            </SidebarProvider>
+          </div>
         </ThemeProvider>
       </body>
     </html>
