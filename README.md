@@ -11,11 +11,11 @@ A web application designed to showcase and manage images seamlessly. Built with 
 - [x] Image Component
 - [x] Shadcn/ui
 - [x] Side Navigation
-- [ ] Gallery Page
-- [ ] List Images
+- [x] Gallery Page
+- [x] List Images
+- [x] Masonry Grid
 - [ ] Favorites
 - [ ] Optimistic Updates
-- [ ] Masonry Grid
 - [ ] Albums
 - [ ] Add to Album
 - [ ] Albums Page
