@@ -1,4 +1,5 @@
-# <h1 align="center">Cloudinary Image Gallery</h1>
+# <h1 align="center">PIXILARY</h1>
+<p align="center">An Image gallery with modern functionalities built with NextJS and Cloudinary</p>
 
 A web application designed to showcase and manage images seamlessly. Built with modern web technologies, it leverages Cloudinary's powerful image hosting and transformation capabilities to deliver a fast, responsive, and user-friendly experience.
 
@@ -14,7 +15,7 @@ A web application designed to showcase and manage images seamlessly. Built with 
 - [x] Gallery Page
 - [x] List Images
 - [x] Masonry Grid
-- [ ] Favorites
+- [x] Favorites
 - [ ] Optimistic Updates
 - [ ] Albums
 - [ ] Add to Album

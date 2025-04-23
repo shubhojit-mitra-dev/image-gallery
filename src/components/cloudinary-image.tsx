@@ -2,11 +2,10 @@
 
 import { Heart } from "@/components/icons/heart";
 import { CldImage, CldImageProps } from "next-cloudinary";
-// import { useState, useTransition } from "react";
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import { FullHeart } from "@/components/icons/full-heart";
 import { SearchResult } from "@/app/gallery/page";
-// import { setAsFavoriteAction } from "@/app/gallery/actions";
+import { setAsFavoriteAction } from "@/app/gallery/actions";
 // import { ImageMenu } from "./image-menu";
 
 export function CloudinaryImage(
@@ -15,7 +14,8 @@ export function CloudinaryImage(
     onUnheart?: (unheartedResource: SearchResult) => void;
   } & Omit<CldImageProps, "src">
 ) {
-  // const [transition, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
+  // console.log(transition);
 
   const { imageData, onUnheart, ...cldImageProps } = props;
 
@@ -24,16 +24,18 @@ export function CloudinaryImage(
   );
 
   return (
-    <div className="relative">
-      <CldImage {...cldImageProps} src={imageData.public_id} />
+    <div className="relative overflow-hidden rounded-xl">
+      <div className="transition-transform duration-300 ease-in-out hover:scale-110">
+        <CldImage {...cldImageProps} src={imageData.public_id} />
+      </div>
       {isFavorited ? (
         <FullHeart
           onClick={() => {
             onUnheart?.(imageData);
             setIsFavorited(false);
-            // startTransition(() => {
-            //   setAsFavoriteAction(imageData.public_id, false);
-            // });
+            startTransition(() => {
+              setAsFavoriteAction(imageData.public_id, false);
+            });
           }}
           className="absolute top-2 left-2 hover:text-white text-red-500 cursor-pointer"
         />
@@ -41,9 +43,9 @@ export function CloudinaryImage(
         <Heart
           onClick={() => {
             setIsFavorited(true);
-            // startTransition(() => {
-            //   setAsFavoriteAction(imageData.public_id, true);
-            // });
+            startTransition(() => {
+              setAsFavoriteAction(imageData.public_id, true);
+            });
           }}
           className="absolute top-2 left-2 hover:text-red-500 cursor-pointer"
         />
