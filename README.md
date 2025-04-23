@@ -16,7 +16,7 @@ A web application designed to showcase and manage images seamlessly. Built with 
 - [x] List Images
 - [x] Masonry Grid
 - [x] Favorites
-- [ ] Optimistic Updates
+- [x] Optimistic Updates
 - [ ] Albums
 - [ ] Add to Album
 - [ ] Albums Page

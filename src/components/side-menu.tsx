@@ -31,10 +31,10 @@ export default function SideMenu() {
             <SidebarContent>
                 <SidebarGroup>
                     <SidebarGroupContent>
-                        <SidebarMenu className="flex flex-col space-y-2 px-5">
+                        <SidebarMenu className="flex flex-col">
                             {items.map((item) => (
                                 <SidebarMenuItem key={item.title}>
-                                    <SidebarMenuButton asChild className="text-xl">
+                                    <SidebarMenuButton asChild className="text-xl px-5 py-5 hover:bg-accent">
                                         <Link href={item.url}>
                                             <item.icon />
                                             <span>{item.title}</span>
