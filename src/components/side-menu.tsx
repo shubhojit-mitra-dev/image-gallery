@@ -1,4 +1,4 @@
-import { Folder, Heart, Image } from "lucide-react";
+import { Heart, Image } from "lucide-react";
 import Link from "next/link";
 import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "./ui/sidebar";
 
@@ -8,11 +8,11 @@ const items = [
         url: "/gallery",
         icon: Image,
     },
-    {
-        title: "Albums",
-        url: "/albums",
-        icon: Folder,
-    },
+    // {
+    //     title: "Albums",
+    //     url: "/albums",
+    //     icon: Folder,
+    // },
     {
         title: "Favorites",
         url: "/favorites",

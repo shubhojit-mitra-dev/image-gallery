@@ -1,4 +1,7 @@
 import PixilaryImage from '@/components/pixilary-image'
+import { Button } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 import React from 'react'
 
 const page = () => {
@@ -17,10 +20,17 @@ const page = () => {
               </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-[600px] mx-auto">
-              A powerful image management platform built on Cloudinary. Upload, organize,
-              transform, and share your visual content with unmatched flexibility and
-              performance—all from a single intuitive interface.
+              Upload, organize, transform, and share your visual content with unmatched flexibility and
+              performance.
             </p>
+            <div>
+              <Button variant="default"  asChild>
+                <Link href={"/gallery"} className="py-4">
+                <p className=''>Go To Gallery</p>
+                <ArrowRight />
+                </Link>
+              </Button>
+            </div>
           </div>
 
           <div className="relative w-full max-w-[1200px] mx-auto mt-20">
