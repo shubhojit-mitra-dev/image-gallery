@@ -5,6 +5,7 @@ import { Button } from './ui/button'
 import { Upload } from 'lucide-react'
 import { CldUploadButton } from 'next-cloudinary'
 import { useRouter } from 'next/navigation'
+import { revalidateGallery } from "@/app/gallery/actions";
 
 const UploadButton = () => {
     const router = useRouter();
@@ -14,6 +15,7 @@ const UploadButton = () => {
                 <Upload className="h-4 w-4" />
                 <CldUploadButton
                     onSuccess={() => {
+                        revalidateGallery();
                         setTimeout(() => {
                           router.refresh();
                         }, 2000);
