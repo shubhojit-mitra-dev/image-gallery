@@ -14,3 +14,7 @@ export async function setAsFavoriteAction(
   revalidatePath('/gallery');
   revalidatePath('/favorites');
 }
+
+export async function revalidateGallery() {
+  revalidatePath('/gallery');
+}
