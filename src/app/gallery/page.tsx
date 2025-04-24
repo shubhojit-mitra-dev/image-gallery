@@ -3,6 +3,8 @@ import UploadButton from '@/components/UploadButton'
 import cloudinary from "cloudinary";
 import GalleryGrid from '@/components/gallery-grid';
 
+export const revalidate = 10;
+
 export type SearchResult = {
     public_id: string;
     tags: string[];
