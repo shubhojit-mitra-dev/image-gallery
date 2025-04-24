@@ -18,7 +18,10 @@ const UploadButton = () => {
                         revalidateGallery();
                         setTimeout(() => {
                           router.refresh();
-                        }, 2000);
+                        }, 300);
+                        setTimeout(() => {
+                          router.refresh();
+                        }, 500);
                       }}
                     uploadPreset="image-upload-unsigned"
                 />
