@@ -40,7 +40,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <nav className="border-b bg-background fixed top-0 left-0 w-full z-50">
-            <div className="flex h-16 items-center px-4 pl-12 xl:pl-4 container mx-auto">
+            <div className="flex h-16 items-center px-12 mx-auto">
               <Link href={"/"} className="text-2xl lg:text-3xl font-extrabold tracking-tighter uppercase">{"<Pixinary />"}</Link>
               <div className="ml-auto flex items-center space-x-4">
                 <ModeToggle />

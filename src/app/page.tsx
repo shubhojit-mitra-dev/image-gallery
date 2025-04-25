@@ -6,7 +6,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex justify-center items-center flex-col bg-background">
       {/* Hero Section */}
       <div className="container pt-32 lg:pt-20 pb-20">
         {/* Content */}
